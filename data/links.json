@@ -1,0 +1,77 @@
+[
+	{
+		"title":"Profiles on the Web"
+		,"entries":[
+			[
+				"http://facebook.com/home.php?#/profile.php?id=1827829618&ref=profile"
+				,"Facebook"
+			]
+			,[
+				"https://www.linkedin.com/in/chinoto"
+				,"LinkedIn"
+			]
+			,[
+				"https://github.com/chinoto"
+				,"GitHub"
+			]
+			,[
+				"http://stackoverflow.com/users/1524693/chinoto-vokro"
+				,"stackoverflow"
+			]
+			,[
+				"http://wiremod.com/forum/member.php?u=4160"
+				,"Wiremod"
+			]
+		]
+	}
+	,{
+		"title":"Random Stuff"
+		,"entries":[
+			[
+				"http://americanparkour.com/"
+				,"American Parkour"
+			]
+			,[
+				"http://seanpound.com/"
+				,"Sean's Website (Brother)"
+			]
+			,[
+				"http://www.animalliberationfront.com/Practical/Health/VEGAN-L%20FAQ.htm"
+				,"Animal Liberation Front's (ALF) FAQ"
+			]
+		]
+	}
+	,{
+		"title":"Free/Libre/Open-Source Software (aka F/OSS) and GNU/Linux Links"
+		,"entries":[
+			[
+				"http://fsf.org/"
+				,"Free Software Foundation"
+			]
+			,[
+				"http://gnu.org/"
+				,"GNU (GNU is Not UNIX)"
+				,"(Meant for their OS, but mostly its about free software philosophy)"
+			]
+			,[
+				"http://linuxfoundation.org/"
+				,"Linux Foundation"
+			]
+			,[
+				"https://www.opensuse.org/"
+				,"openSUSE"
+				,"(The Linux distribution I use. Derived from Slackware and uses the RPM package format with zypper as it's package manager.)"
+			]
+			,[
+				"http://osswin.sourceforge.net/"
+				,"OSSwin Project"
+				,"(A resource for finding open-source Windows programs)"
+			]
+			,[
+				"http://jamendo.com/en/"
+				,"Jamendo"
+				,"(A website that hosts music using Creative Commons licenses)"
+			]
+		]
+	}
+]

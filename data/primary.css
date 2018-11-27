@@ -1,0 +1,187 @@
+html {
+	text-align:center;
+	color:#ff8800;
+	font-family:Arial,sans-serif;
+	background:#408040 url('../images/green_grid_darker.gif');
+}
+body {
+	display:inline-block;
+	margin:1em auto;
+	border:0.1em solid #808080;
+	padding:0.5em;
+	background:rgba(0,0,0,0.5);
+	font-size:1.1em;
+}
+
+a         {text-decoration:none;}
+a:link    {color:#c0c000;}
+a:visited {color:#a0a000;}
+a:hover   {color:#ffff00;text-decoration:underline;}
+
+img {border/:0;}
+
+header {
+	display:inline-block;
+}
+
+#banner {
+	display:inline-block;
+	font-size:4em;
+	font-size:7.5vmax;
+	border:0.1em solid #000;
+	margin:0.2em;
+	padding:0.5em 1em;
+
+	box-shadow:0 0 0.2em #fff;
+	text-shadow:0 0 0.3em #000;
+
+	background: #80ff80; /* Old browsers */
+	background: -moz-linear-gradient(top, #80ff80 0%, #40a040 48%, #60c060 52%, #004000 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#80ff80), color-stop(48%,#40a040), color-stop(52%,#60c060), color-stop(100%,#004000)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #80ff80 0%,#40a040 48%,#60c060 52%,#004000 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #80ff80 0%,#40a040 48%,#60c060 52%,#004000 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #80ff80 0%,#40a040 48%,#60c060 52%,#004000 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #80ff80 0%,#40a040 48%,#60c060 52%,#004000 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ff80', endColorstr='#004000',GradientType=0 ); /* IE6-9 */
+}
+
+header nav {
+	display:inline-block;
+}
+header nav ul {
+	display:flex;
+	flex-wrap:wrap;
+	margin:0;
+	padding:0;
+	width:40em; /*TODO: Use max-width and figure out how to default to stretched, not shrunk. table-cell?*/
+	max-width:70vw; /*TODO: Use max-width and figure out how to default to stretched, not shrunk. table-cell?*/
+	justify-content: space-around;
+	list-style-type:none;
+}
+header nav ul li {
+	display:inline-block;
+}
+header nav ul li a {
+	display:inline-block;
+	position:relative;
+	border:0.1em solid #000000;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-weight:bold;
+	padding:0.5em 0.9em;
+	text-decoration:none;
+
+	-moz-box-shadow:inset 0 0.1em 0 0 #006000;
+	-webkit-box-shadow:inset 0 0.1em 0 0 #006000;
+	box-shadow:inset 0 0.1em 0 0 #006000;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #004000), color-stop(1, #008000));
+	background:-moz-linear-gradient(top, #004000 5%, #008000 100%);
+	background:-webkit-linear-gradient(top, #004000 5%, #008000 100%);
+	background:-o-linear-gradient(top, #004000 5%, #008000 100%);
+	background:-ms-linear-gradient(top, #004000 5%, #008000 100%);
+	background:linear-gradient(to bottom, #004000 5%, #008000 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#004000', endColorstr='#008000',GradientType=0);
+	background-color:#004000;
+}
+header nav ul li a:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #008000), color-stop(1, #004000));
+	background:-moz-linear-gradient(top, #008000 5%, #004000 100%);
+	background:-webkit-linear-gradient(top, #008000 5%, #004000 100%);
+	background:-o-linear-gradient(top, #008000 5%, #004000 100%);
+	background:-ms-linear-gradient(top, #008000 5%, #004000 100%);
+	background:linear-gradient(to bottom, #008000 5%, #004000 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#008000', endColorstr='#004000',GradientType=0);
+	background-color:#008000;
+}
+header nav ul li a:active {
+	top:0.1em;
+}
+
+#page {
+	display:inline-block;
+	margin:1em auto;
+}
+
+ol#changelog {
+	max-width:30em;
+	margin:0 auto;
+	border-collapse:collapse;
+	list-style-type:none;
+	text-align:left;
+}
+ol#changelog>li {
+	border-bottom:0.2em dotted #888;
+}
+ol#changelog>li>h2 {
+	margin:0;
+	white-space:nowrap;
+}
+ol#changelog>li>* {
+	padding:0.5em 0 0;
+	vertical-align: top;
+}
+ol#changelog>li p {
+	white-space: pre-wrap;
+	text-indent: 1em;
+	margin:0 0 0.5em;
+}
+@media (min-width: 40em) {
+	ol#changelog {
+		display:table;
+	}
+	ol#changelog>li {
+		display:table-row;
+	}
+	ol#changelog>li>* {
+		display:table-cell;
+	}
+}
+
+#browser {
+	display:none;
+	z-index:10;
+	position:fixed;
+	top:0.5em;
+	left:0.5em;
+	background:rgba(0,0,0,0.5);
+	border:0.1em solid #808080;
+	width:20em;
+	padding:0.5em;
+}
+
+#sigs {
+	white-space:nowrap;
+	text-align:left;
+}
+/*
+wdh means width/height, aka aspect ratio
+315p means 315%, or 3.15 aspect ratio
+*/
+#sigs .wdh315p {width:410px;height:130px;}
+#sigs .wdh1 {width:100px;height:100px;}
+@media (min-width: 1100px) {
+	#sigs {
+		-moz-column-count:2;
+		-webkit-column-count:2;
+		column-count:2;
+	}
+}
+@media (max-width: 650px) {
+	#sigs .wdh315p {width:63vw;height:20vw;}
+	#sigs .wdh1    {width:15vw;height:15vw;}
+}
+@media (max-width: 327px) {
+	#sigs .wdh315p {width:205px;height:65px;}
+	#sigs .wdh1 {width:50px;height:50px;}
+}
+
+/*HTML Structure Checks*/
+[width],[height]
+,[style]:not([style$=';'])
+,[style*='px']
+,:not(colgroup)>col
+,:not(thead,tbody,tfoot)>tr
+,:not(tr)>th
+,:not(tr)>td
+,img:not([alt]) {outline:0.5em solid #f0f;}

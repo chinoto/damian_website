@@ -1,0 +1,8 @@
+<div style='text-align:left;'>
+	<ul ng-repeat='group in data.links' style='list-style:circle inside;margin-bottom:0.5em;'>
+		<h3>{{group.title}}</h3>
+		<li ng-repeat='link in group.entries'>
+			<a href='{{link[0]}}'>{{link[1]}}</a> {{link[2]}}
+		</li>
+	</ul>
+</div>

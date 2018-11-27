@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
+	<head>
+		<meta charset='UTF-8'/>
+		<meta name='viewport' content='width=device-width,initial-scale=1'/>
+		<title>Damian's Website</title>
+		<link rel='stylesheet' type='text/css' href='./data/normalize.css' />
+		<link rel='stylesheet' type='text/css' href='./data/primary.css' />
+		<link rel='icon' href='favicon.ico' type='image/x-icon' />
+	</head>
+	<body>
+		<header id='header'>
+			<div id='banner'>
+				Damian's Website!
+				<small style='display:block;font-size:0.35em;'>
+					I couldn't think of anything better 😛
+				</small>
+			</div><br/>
+			<nav><ul>
+				<li><a href='#/home'     >Home</a></li>
+				<li><a href='#/links'    >Links</a></li>
+				<li><a href='#/photoshop'>Photoshop</a></li>
+				<li><a href='#/chocolate_bread'>Chocolate Bread</a></li>
+				<!--li><a href='#/10_bday'  >10th B-Day Pictures</a></li-->
+			</ul></nav>
+		</header>
+		<br/>
+		<section id='page' data-ng-view=''>This website requires javascript until I feel like implementing a server side solution.</section>
+
+		<hr/>
+		<footer>
+			<h1>Changelog</h1>
+			<ol id='changelog' ng-controller='changelog'>
+				<li ng-repeat='change in data.changelog'>
+					<h2>{{change[0]}}</h2>
+					<div>
+						<p ng-repeat="line in change[1].split('\n')">{{line}}</p>
+					</div>
+				</li>
+			</ol>
+		</footer>
+
+		<div id='browser' style='display:none;'>
+			Internet Explorer is insecure and takes forever to (poorly) implement standards.<br/>
+			Get an up to date version of
+			<a href='http://www.google.com/chrome/index.html'>Chrome</a>,
+			<a href='http://www.mozilla.com/en-US/firefox/fx/'>Firefox</a>, or
+			<a href='http://www.opera.com/products/'>Opera</a>.<br/><br/>
+
+			If none of those suit you, try finding another one here:
+			<a style='white-space:nowrap;' href='http://en.wikipedia.org/wiki/List_of_web_browser_engines'>Web Browser List (Wikipedia)</a><br/><br/>
+
+			I recommend a Gecko or Webkit based browser since they are the most popular and thus should be better supported by websites.
+		</div>
+
+		<!--https://developers.google.com/speed/libraries/devguide-->
+		<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js'></script>
+		<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular-route.js'></script>
+		<script src='./data/primary.js'></script>
+	</body>
+</html>
