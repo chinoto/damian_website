@@ -1,0 +1,32 @@
+{
+  "name": "damian_website",
+  "version": "1.0.0",
+  "description": "Damian's Website",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config build/webpack.config.dev.js"
+  },
+  "author": "Damian J Pound (Chinoto Vokro)",
+  "license": "WTFPL",
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@vue/cli": "*",
+    "babel-helper-vue-jsx-merge-props": "*",
+    "babel-loader": "*",
+    "babel-plugin-syntax-jsx": "*",
+    "babel-plugin-transform-vue-jsx": "*",
+    "css-loader": "*",
+    "html-webpack-plugin": "*",
+    "uglifyjs-webpack-plugin": "*",
+    "vue-loader": "*",
+    "vue-style-loader": "*",
+    "vue-template-compiler": "*",
+    "webpack": "*",
+    "webpack-cli": "*"
+  },
+  "dependencies": {
+    "vue": "*",
+    "vue-router": "*"
+  }
+}

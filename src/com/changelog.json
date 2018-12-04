@@ -1,0 +1,70 @@
+[
+	[
+		"2018-12-03",
+		"Got a call about a potential job using Vue, so I shifted gears and Vue-ified my website instead.\n I am using JSX and vue files with Webpack now, which is great for development and every route is packed into a single file, but it means curious visitors won't see the original files (source mapping isn't perfect for Vue files)."
+	],
+	[
+		"2018-11-23",
+		"Prepared for Preact-ification by reorganizing my files: everything but index.html, favicon.ico, and [./images/] are in [./data/].\n Replaced Meyer's reset.css with necolas/normalize.css so I don't have to undo resets.\n Tweaked the website so things like the banner, navigation buttons, changelog, images, and blocks of text scale according to the screen size and doesn't require horizontal scrolling even at 291 pixels wide (not a target, just what it happens to be on Chrome/openSUSE)."
+	],
+	[
+		"2018-11-21",
+		"Broke my website temporarily while attempting to preact-ify it."
+	],
+	[
+		"2015-01-31",
+		"Angular-ized my website to make maintenance easier and page switching faster."
+	],
+	[
+		"2015-01-23",
+		"Turned the image buttons and banner into simple text with fancy css."
+	],
+	[
+		"2013-07-24",
+		"Made index.html polyglot markup compatible, expected more trouble but it was nothing."
+	],
+	[
+		"2012-07-27",
+		"Added <!DOCTYPE html> to each page. Oddly that made my table borders orange... YAY! :D"
+	],
+	[
+		"2012-07-2?",
+		"Someone in IRC told me my font was too small to read, apparently I never set a font-size or a font-family... *facepalm*"
+	],
+	[
+		"2012-07-24",
+		"Changed the photoshop page to use \"column-count\" instead of tables, now it should be much easier to add new content if I ever do."
+	],
+	[
+		"2012-07-08",
+		"Added a message for Internet Explorer users..."
+	],
+	[
+		"2012-07-07",
+		"Added a page for the bday pictures that have been sitting on the server for several years. They used to have a page before I obliterated all the Frontpage crap."
+	],
+	[
+		"2012-07-06",
+		"Removed the div#body, migrated body styles to html and div#body to body, doing so updated \"Links\" and \"Photoshop\" which I had forgotten to deal with.\nMade the footer (this box) visually look like a separate chunk. Changed the br tags to div#hr with a top border. Noticed that my footer wasn't closed.\nRealized that my images on this page were specifying \"length\" which is invalid rather than \"width\" and that my picture was using the width & height of my previous picture causing it to use the browser's crappy scaling. Also found that practically all of my img tags weren't ended.\nSeparated the audio tag javascript into another file. Simplified the script and tag parameters substantially by inserting relevant data into the element."
+	],
+	[
+		"2012-06-29",
+		"Put content into div#body with a transparent background to make text even easier to read than shadows did. Changed picture of self.\nSide note: Being able to to edit my website \"directly\" by using sshfs instead of Filezilla is AWESOME. Now if only I knew of a Linux native editor that I liked as much as Notepad++ (2018-11-23 edit: I eventually found Atom, it was probably in 2017)"
+	],
+	[
+		"2011-11-08",
+		"Added triple shadow CSS effect to make the text easier to read."
+	],
+	[
+		"2011-03-25",
+		"Upgraded website to use CSS, made the HTML proper by closing tags and indenting stuff, and replaced those awful Windows Media Player applets with HTML5 audio tags (had to hack in playlists with javascript)."
+	],
+	[
+		"2007-04-03",
+		"Although I already knew HTML, I took a Web Design class as something fun to do (turned out to be too basic).\nI gradually created a webpage from scratch and even made this kickass background.\nNear the end of the year I hated what a mess Frontpage made of my website's code and decided to redo my website without using Frontpage as a crutch."
+	],
+	[
+		"Before logging",
+		"Dad created the site when I was younger than 10 and I gradually added stuff to it using Microsoft Frontpage (Yuck)."
+	]
+]
