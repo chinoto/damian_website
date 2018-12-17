@@ -1,7 +1,11 @@
 [
 	[
+		"2018-12-17",
+		"Converted to Preact because it is lighter and allows more direct control (less magic). Took more advantage of Webpack by dynamically loading the changelog and non-home routes. Give loading images a background as a placeholder. Mobile friendliness tweaks."
+	],
+	[
 		"2018-12-03",
-		"Got a call about a potential job using Vue, so I shifted gears and Vue-ified my website instead.\n I am using JSX and vue files with Webpack now, which is great for development and every route is packed into a single file, but it means curious visitors won't see the original files (source mapping isn't perfect for Vue files)."
+		"Got a call about a potential job using Vue, so I shifted gears and Vue-ified my website instead.\n I am using JSX and vue files with Webpack now, which is great for development and every route is packed into a single file, but it means curious visitors won't see the original files (source mapping isn't perfect)."
 	],
 	[
 		"2018-11-23",

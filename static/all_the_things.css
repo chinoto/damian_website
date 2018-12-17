@@ -1,8 +1,9 @@
 html {
 	text-align:center;
-	color:#ff8800;
 	font-family:Arial,sans-serif;
-	background:#408040 url('./green_grid.png');
+	color:hsl(180, 75%, 40%);
+	text-shadow:0 0 0.2em #000;
+	background-color:#408040;
 }
 body {
 	display:inline-block;
@@ -14,9 +15,13 @@ body {
 }
 
 a         {text-decoration:none;}
-a:link    {color:#c0c000;}
-a:visited {color:#a0a000;}
-a:hover   {color:#ffff00;text-decoration:underline;}
+a:link    {color:hsl(180, 100%, 85%);}
+a:visited {color:hsl(180, 100%, 65%);}
+a:hover   {color:hsl(180, 100%, 90%);text-decoration:underline;}
+
+/*Show that the images exist, even if they haven't loaded yet.
+Not using this for everything since I might want a transparent image.*/
+.loading_bg,#sigs img {background:rgba(255,255,255,0.1);}
 
 header {
 	display:inline-block;
@@ -25,13 +30,15 @@ header {
 #banner {
 	display:inline-block;
 	font-size:4em;
-	font-size:7.5vmax;
+	font-size:7.5vw;
 	border:0.1em solid #000;
 	margin:0.2em;
 	padding:0.5em 1em;
 
 	box-shadow:0 0 0.2em #fff;
 	text-shadow:0 0 0.3em #000;
+
+	color:hsl(180, 75%, 60%);
 
 	background: #80ff80; /* Old browsers */
 	background: -moz-linear-gradient(top, #80ff80 0%, #40a040 48%, #60c060 52%, #004000 100%); /* FF3.6+ */
@@ -43,6 +50,14 @@ header {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ff80', endColorstr='#004000',GradientType=0 ); /* IE6-9 */
 }
 
+@media (min-width: 50em) {
+	#banner {font-size:3.75rem;}
+}
+
+@media (max-width: 30em) {
+	#banner {font-size:2.25rem;}
+}
+
 header nav {
 	display:inline-block;
 }
@@ -51,7 +66,7 @@ header nav ul {
 	flex-wrap:wrap;
 	margin:0;
 	padding:0;
-	width:40em; /*TODO: Use max-width and figure out how to default to stretched, not shrunk. table-cell?*/
+	width:40em;
 	max-width:70vw; /*TODO: Use max-width and figure out how to default to stretched, not shrunk. table-cell?*/
 	justify-content: space-around;
 	list-style-type:none;
@@ -104,6 +119,7 @@ main {
 ol#changelog {
 	max-width:30em;
 	margin:0 auto;
+	padding:0;
 	border-collapse:collapse;
 	list-style-type:none;
 	text-align:left;
@@ -113,6 +129,7 @@ ol#changelog>li {
 }
 ol#changelog>li>h2 {
 	margin:0;
+	padding-right:1em;
 	white-space:nowrap;
 }
 ol#changelog>li>* {
@@ -136,22 +153,11 @@ ol#changelog>li p {
 	}
 }
 
-#browser {
-	display:none;
-	z-index:10;
-	position:fixed;
-	top:0.5em;
-	left:0.5em;
-	background:rgba(0,0,0,0.5);
-	border:0.1em solid #808080;
-	width:20em;
-	padding:0.5em;
-}
-
 #sigs {
 	white-space:nowrap;
 	text-align:left;
 }
+
 /*
 wdh means width/height, aka aspect ratio
 315p means 315%, or 3.15 aspect ratio

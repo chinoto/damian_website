@@ -1,14 +1,15 @@
 'use strict'
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const { VueLoaderPlugin } = require('vue-loader');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-	mode: 'development',
-	entry: [
-		'./src/app.js'
-	],
-	output:{
+	mode: 'production',
+	entry: ['./src/app.js'],
+	output: {
+		filename: 'bundle_[name].[chunkhash].js',
+		path: __dirname + '/dist',
 		sourceMapFilename: 'main.map'
 	},
 	devtool: 'source-map',
@@ -17,35 +18,20 @@ module.exports = {
 			{
 				test: /\.js$/,
 				exclude: [/node_modules/],
-				use: [{
-					loader: 'babel-loader',
-					options: {
-            presets: ['@babel/preset-env'],
-            plugins: ['transform-vue-jsx']
-          }
-				}]
-			},
-			{
-				test: /\.vue$/,
-				use: 'vue-loader'
+				use: ['babel-loader']
 			},
 		]
 	},
 	plugins: [
-		new VueLoaderPlugin()
+		new HtmlWebpackPlugin({template:'index.tmpl.html'}),
+		new CopyWebpackPlugin([{from:'static',to:'static'}]),
+		new (require('webpack-bundle-analyzer').BundleAnalyzerPlugin),
 	],
-	optimization: {
-		minimizer: [
-			new UglifyJsPlugin({
-				cache: true,
-				parallel: true,
-				sourceMap: true,
-				uglifyOptions: {
-					compress: true,
-					ecma: 6,
-					mangle: true
-				}
-			})
-		]
+	optimization:{
+		splitChunks:{
+			cacheGroups:{
+				
+			}
+		}
 	}
 }

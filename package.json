@@ -9,24 +9,20 @@
   "author": "Damian J Pound (Chinoto Vokro)",
   "license": "WTFPL",
   "devDependencies": {
-    "@babel/core": "^7.2.0",
-    "@babel/preset-env": "^7.2.0",
-    "@vue/cli": "*",
-    "babel-helper-vue-jsx-merge-props": "*",
+    "@babel/core": "*",
+    "@babel/plugin-syntax-dynamic-import": "*",
+    "@babel/preset-env": "*",
     "babel-loader": "*",
     "babel-plugin-syntax-jsx": "*",
-    "babel-plugin-transform-vue-jsx": "*",
-    "css-loader": "*",
+    "copy-webpack-plugin": "*",
     "html-webpack-plugin": "*",
+    "preact-cli": "*",
     "uglifyjs-webpack-plugin": "*",
-    "vue-loader": "*",
-    "vue-style-loader": "*",
-    "vue-template-compiler": "*",
-    "webpack": "*",
-    "webpack-cli": "*"
+    "webpack-bundle-analyzer": "*",
+    "webpack-cli": "*",
+    "webpack": "*"
   },
   "dependencies": {
-    "vue": "*",
-    "vue-router": "*"
+    "preact": "*"
   }
 }

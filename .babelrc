@@ -1,0 +1,17 @@
+{
+	"presets": [
+		["@babel/preset-env", {
+			"modules": false,
+			"targets": {
+				"browsers": ">0.2%, not dead"
+			},
+		 "exclude": [
+			 "transform-regenerator"
+		 ]
+		}]
+	],
+	"plugins": [
+		["transform-react-jsx", { "pragma": "h" }],
+		"@babel/plugin-syntax-dynamic-import"
+	]
+}
