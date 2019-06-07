@@ -1,6 +1,5 @@
 'use strict'
-const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
@@ -23,15 +22,9 @@ module.exports = {
 		]
 	},
 	plugins: [
+		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({template:'index.tmpl.html'}),
 		new CopyWebpackPlugin([{from:'static',to:'static'}]),
-		new (require('webpack-bundle-analyzer').BundleAnalyzerPlugin),
-	],
-	optimization:{
-		splitChunks:{
-			cacheGroups:{
-				
-			}
-		}
-	}
+		//new (require('webpack-bundle-analyzer').BundleAnalyzerPlugin),
+	]
 }

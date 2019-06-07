@@ -11,7 +11,7 @@
 		}]
 	],
 	"plugins": [
-		["transform-react-jsx", { "pragma": "h" }],
+		["@babel/transform-react-jsx", { "pragma": "h" }],
 		"@babel/plugin-syntax-dynamic-import"
 	]
 }
