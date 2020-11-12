@@ -1,5 +1,5 @@
-import {h, Component} from 'preact';
-export default _=><div style='max-width:30em;text-align:left;'>
+import { h } from 'preact';
+export const ChocolateBread = () => <div style='max-width:30em;text-align:left;'>
 	Adapted from <a href='https://www.popsugar.com/food/Vegan-Chocolate-Banana-Bread-36904908'>Popsugar's "Double Chocolate Banana Bread That Vegans and Omnivores Alike Will Adore"</a>
 	<h1>Dry</h1>
 	<ul>

@@ -1,18 +1,21 @@
-import {h, Component} from 'preact';
-export default _=><div>
-	<b>Photoshop Signature Gallery</b><br/>(I no longer have a copy, so don't expect new ones)
+import { h } from 'preact';
+
+import sigs from '../../static/sigs/*.png';
+
+export const Photoshop = () => <div>
+	<b>Photoshop Signature Gallery</b><br />(I no longer have a copy, so don't expect new ones)
 	<div id='sigs'>
-		<img alt='' class='wdh315p' src='static/sigs/chinotolozsig.png'   /><img alt='' class='wdh1' src='static/sigs/chinotolozavatar.png'/><br/>
-		<img alt='' class='wdh315p' src='static/sigs/sean3.png'           /><br/>
-		<img alt='' class='wdh315p' src='static/sigs/grandpa.png'         /><br/>
-		<img alt='' class='wdh315p' src='static/sigs/joe_bsd.png'         /><br/>
-		<img alt='' class='wdh315p' src='static/sigs/chuck_motorcycle.png'/><br/>
-		<img alt='' class='wdh315p' src='static/sigs/sonic_team.png'      /><br/>
-		<img alt='' class='wdh315p' src='static/sigs/greenday.png'        /><br/>
-		<img alt='' class='wdh315p' src='static/sigs/halo_space.png'      /><img alt='' class='wdh1' src='static/sigs/halo_space_avatar.png'/><br/>
-		<img alt='' class='wdh315p' src='static/sigs/halo_wormhole.png'   /><br/>
-		<img alt='' class='wdh315p' src='static/sigs/danielle_tiger.png'  /><br/>
-		<img alt='' class='wdh315p' src='static/sigs/xao_xiong.png'       /><br/>
-		<img alt='' class='wdh315p' src='static/sigs/victoria.png'        /><br/>
+		<img alt='' class='wdh315p' src={sigs.chinotolozsig} /><img alt='' class='wdh1' src={sigs.chinotolozavatar} /><br />
+		<img alt='' class='wdh315p' src={sigs.sean3} /><br />
+		<img alt='' class='wdh315p' src={sigs.grandpa} /><br />
+		<img alt='' class='wdh315p' src={sigs.joe_bsd} /><br />
+		<img alt='' class='wdh315p' src={sigs.chuck_motorcycle} /><br />
+		<img alt='' class='wdh315p' src={sigs.sonic_team} /><br />
+		<img alt='' class='wdh315p' src={sigs.greenday} /><br />
+		<img alt='' class='wdh315p' src={sigs.halo_space} /><img alt='' class='wdh1' src={sigs.halo_space_avatar} /><br />
+		<img alt='' class='wdh315p' src={sigs.halo_wormhole} /><br />
+		<img alt='' class='wdh315p' src={sigs.danielle_tiger} /><br />
+		<img alt='' class='wdh315p' src={sigs.xao_xiong} /><br />
+		<img alt='' class='wdh315p' src={sigs.victoria} /><br />
 	</div>
 </div>

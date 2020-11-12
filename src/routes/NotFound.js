@@ -1,6 +1,6 @@
-import {h, Component} from 'preact';
+import { h } from 'preact';
 
-export default _=><div>
+export const NotFound = () => <div>
   <h2>
     404: Route not found.
   </h2>

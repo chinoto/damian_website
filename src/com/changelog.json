@@ -1,5 +1,9 @@
 [
 	[
+		"2020-11-05",
+		"Switched from Webpack to Parcel because there's very little to understand and generally makes everything far easier (eg, Rust/WASM integration)."
+	],
+	[
 		"2018-12-17",
 		"Converted to Preact because it is lighter and allows more direct control (less magic). Took more advantage of Webpack by dynamically loading the changelog and non-home routes. Give loading images a background as a placeholder. Mobile friendliness tweaks."
 	],

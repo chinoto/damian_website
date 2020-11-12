@@ -3,27 +3,43 @@
   "version": "1.0.0",
   "description": "Damian's Website",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chinoto/damian_website.git"
+  },
   "scripts": {
-    "build": "webpack"
+    "build": "parcel build --public-url /~damian/ index.html",
+    "serve": "parcel serve index.html"
   },
   "author": "Damian J Pound (Chinoto Vokro)",
   "license": "WTFPL",
   "devDependencies": {
-    "@babel/core": "*",
-    "@babel/plugin-syntax-dynamic-import": "*",
-    "@babel/plugin-transform-react-jsx": "*",
-    "@babel/preset-env": "*",
-    "acorn": "*",
-    "babel-loader": "*",
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-transform-react-jsx": "^7.12.5",
+    "@babel/preset-env": "^7.12.1",
     "babel-plugin-syntax-jsx": "*",
-    "clean-webpack-plugin": "*",
-    "copy-webpack-plugin": "*",
-    "html-webpack-plugin": "*",
-    "webpack": "*",
-    "webpack-bundle-analyzer": "*",
-    "webpack-cli": "*"
+    "babel-polyfill": "^6.26.0",
+    "browserslist": "^4.14.6",
+    "caniuse-lite": "^1.0.30001156",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-clean-dist": "0.0.6",
+    "parcel-plugin-custom-dist-structure": "^1.1.16"
   },
   "dependencies": {
-    "preact": "*"
+    "preact": "^10.5.5"
+  },
+  "customDistStructure": {
+    "config": {
+      ".js": "js",
+      ".map": "map",
+      ".css": "css",
+      "images": [
+        ".jpg",
+        ".png"
+      ]
+    },
+    "options": {
+      "development": true
+    }
   }
 }
