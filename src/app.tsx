@@ -1,10 +1,10 @@
 import 'regenerator-runtime/runtime';
 import { h, render } from 'preact';
 
-import { AsyncCom } from './com/AsyncCom.js';
-import { Header } from './com/Header.js';
-import { Router } from './com/Router.js';
-import { Home } from './routes/Home.js';
+import { AsyncCom } from './com/AsyncCom';
+import { Header } from './com/Header';
+import { Router } from './com/Router';
+import { Home } from './routes/Home';
 import bg_url from '../static/green_grid.png';
 
 //Clear the body element https://stackoverflow.com/a/3450726/1524693
@@ -21,16 +21,16 @@ const paths = {
 	'#/home': () => <Home />,
 	'#/links': () => <AsyncCom
 		key='ln'
-		getCom={async () => (await import('./routes/other.js')).Links} />,
+		getCom={async () => (await import('./routes/other')).Links} />,
 	'#/photoshop': () => <AsyncCom
 		key='ps'
-		getCom={async () => (await import('./routes/Photoshop.js')).Photoshop} />,
+		getCom={async () => (await import('./routes/Photoshop')).Photoshop} />,
 	'#/chocolate_bread': () => <AsyncCom
 		key='cb'
-		getCom={async () => (await import('./routes/other.js')).ChocolateBread} />,
+		getCom={async () => (await import('./routes/other')).ChocolateBread} />,
 	'#/404': () => <AsyncCom
 		key='nf'
-		getCom={async () => (await import('./routes/other.js')).NotFound} />,
+		getCom={async () => (await import('./routes/other')).NotFound} />,
 };
 
 render(
@@ -38,13 +38,16 @@ render(
 		<Header />
 		<br />{/*Header is `display:inline-block`, so we need a manual break*/}
 
+		<div>
+
+		</div>
 		<main>
 			<Router paths={paths} notFound='#/404' defaultCond={/^(#\/?)?$/} defaultTo='#/home' debug={true} />
 		</main>
 
 		<hr />
 
-		<AsyncCom key='footer' getCom={async () => (await import('./com/Footer.js')).Footer} />
+		<AsyncCom key='footer' getCom={async () => (await import('./com/Footer')).Footer} />
 	</div>,
 	document.body
 );

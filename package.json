@@ -14,16 +14,11 @@
   "author": "Damian J Pound (Chinoto Vokro)",
   "license": "WTFPL",
   "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/plugin-transform-react-jsx": "^7.12.5",
-    "@babel/preset-env": "^7.12.1",
-    "babel-plugin-syntax-jsx": "*",
-    "babel-polyfill": "^6.26.0",
-    "browserslist": "^4.14.6",
-    "caniuse-lite": "^1.0.30001156",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-clean-dist": "0.0.6",
-    "parcel-plugin-custom-dist-structure": "^1.1.16"
+    "parcel-plugin-custom-dist-structure": "^1.1.16",
+    "parcel-plugin-wasm.rs": "^1.2.16",
+    "typescript": "^4.0.5"
   },
   "dependencies": {
     "preact": "^10.5.5"
@@ -37,9 +32,6 @@
         ".jpg",
         ".png"
       ]
-    },
-    "options": {
-      "development": true
     }
   }
 }
